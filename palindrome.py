@@ -9,3 +9,5 @@ if rev==x:
     print(True)
 else:
     print(False)    
+
+#WE CAN ALSO WRITE DIRECTLY......return rev==x (if boolean is used)
