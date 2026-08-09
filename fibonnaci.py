@@ -3,6 +3,6 @@ def fib(n):
             return n
         return fib(n-1)+fib(n-2)
 n=int(input("enter the nth term for fibo = "))
-print("the fibonacci number is=",fib(n))
+print("the fibonacci number is="fib(n))
 
             
