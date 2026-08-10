@@ -6,7 +6,7 @@ class Solution:
                 if nums[i]!=nums[k]:
                     k+=1
                     nums[k]=nums[i]
-        return k+1
+        return k+1, nums[:k+1]
 n=int(input("enter the list size= "))
 nums=list(map(int,input().split()))
 print(Solution().removeDuplicates(nums))
