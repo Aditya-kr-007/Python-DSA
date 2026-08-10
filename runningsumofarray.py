@@ -10,6 +10,6 @@ class Solution:
 n=int(input("enter n= "))
 print("enter the list elements= ")
 nums=list(map(int,input().split()))
-result=Solution().runningSum(nums)
-print(result)
+print(Solution().runningSum(nums))
+
 
