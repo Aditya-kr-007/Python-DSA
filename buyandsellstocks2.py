@@ -1,16 +1,13 @@
 from typing import List
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
         n=len(prices)
-        min_price=prices[0]
-        profit=0
-        for i in range(1,n):
-           curr_profit=prices[i]-min_price
-           if curr_profit>profit:
-               profit=curr_profit
-           min_price=min(min_price,prices[i])
-         
+        for i in range(n-1):
+            if prices[i+1] > prices[i]:
+                profit = profit + (prices[i+1] - prices[i])
         return profit
 n=int(input("enter the list size= "))
 nums=list(map(int,input().split()))
 print("the profit is ",Solution().maxProfit(nums))
+                
