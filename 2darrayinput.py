@@ -1,9 +1,7 @@
 #PREFERED FORMAT
 rows = int(input("enter rows: "))
 cols = int(input("enter columns: "))
-
 matrix = []
-
 for i in range(rows):
     row = list(map(int, input().split()))
     matrix.append(row)
