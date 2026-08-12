@@ -2,6 +2,8 @@ from typing import List
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         n=len(nums)
+        if len(nums) == 0:
+            return 0
         curr_sum=0
         max_sum=nums[0]
         for i in range(n):
