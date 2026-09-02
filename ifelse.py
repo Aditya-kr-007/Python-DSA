@@ -1,11 +1,10 @@
+ 
 age=int(input("enter your age= "))
-if(age>=18):
-    test=input()
-    if test=="PASS":
-      print("you are eligible for voting")
-    else:
-     print("not eligible")
+if age>=18:
+ print("eligible for voting")
+elif age<0:
+  print("invalid age")
 else:
-   print("not eligible for voting")
+ print("not eligible for voting")
 
 
