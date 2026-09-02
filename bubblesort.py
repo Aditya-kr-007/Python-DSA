@@ -17,6 +17,5 @@ def sortArray(nums):
         
         return nums
 
-n=int(input("enter the list size= "))
 nums=list(map(int,input().split()))
 print("the sorted array is ",sortArray(nums))
