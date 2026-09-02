@@ -1,5 +1,5 @@
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+
+def sortArray(nums):
         n=len(nums)
         
         for i in range(n):
@@ -19,4 +19,4 @@ class Solution:
 
 n=int(input("enter the list size= "))
 nums=list(map(int,input().split()))
-print("the sorted array is ",Solution().sortArray(nums))
+print("the sorted array is ",sortArray(nums))
