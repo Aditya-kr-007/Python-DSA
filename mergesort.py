@@ -1,5 +1,5 @@
-def merge(nums,l,mid,r):
-        a=[]               #initialize an empty list a to store the left half of the array
+def merge(nums,l,mid,r):    #sorting the array from index l to r using merge sort algorithm
+        a=[]                #initialize an empty list a to store the left half of the array
         b=[]                #initialize an empty list b to store the right half of the array
         for i in range(l,mid+1):
             a.append(nums[i])
@@ -27,19 +27,20 @@ def merge(nums,l,mid,r):
                 j+=1
                 k+=1
     
-def mergeSort(nums,l,r):   #
-        #base case
-        if l>=r:   #if the left index is greater than or equal to the right index, return from the function
+def mergeSort(nums,l,r):   # define a function mergeSort that takes three arguments: nums, l, and r.
+                           #base case
+        if l>=r:           #if the left index is greater than or equal to the right index, return from the function
             return
         #recursive case
-        mid =(l+r)//2
-        mergeSort(nums,l,mid)   #recursively sort the left half of the array from index l to mid
+        mid =(l+r)//2           
+        mergeSort(nums,l,mid)     #recursively sort the left half of the array from index l to mid
         mergeSort(nums,mid+1,r)   #recursively sort the right half of the array from index mid+1 to r
  
-        merge(nums,l,mid,r)   #merge the two sorted halves of the array from index l to r
+        merge(nums,l,mid,r)        #merge the two sorted halves of the array from index l to r
     
 def sortArray(nums) :
-        mergeSort(nums,0,len(nums)-1)
+        n=len(nums)-1
+        mergeSort(nums,0,n)
         return nums
 
 nums=list(map(int,input("Enter the elements of the array separated by space: ").split()))
