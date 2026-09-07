@@ -3,7 +3,7 @@ class Solution:
         n = len(s)
         if n==0:
             return 0
-        set1=set({})
+        set1=set({}) # set is used to store the unique characters of the string
         set1.add(s[0])
         ans=1
         i=0

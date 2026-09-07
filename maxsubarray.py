@@ -10,9 +10,8 @@ class Solution:
             curr_sum=curr_sum+nums[i]
             if curr_sum>max_sum:
                 max_sum=curr_sum
-            if curr_sum<0:
+            if curr_sum<0:  #kadane's algorithm is used to find the maximum sum of subarray
                 curr_sum=0
         return max_sum
-n=int(input("enter the list size= "))
 nums=list(map(int,input().split()))
 print(Solution().maxSubArray(nums))
