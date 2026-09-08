@@ -11,7 +11,7 @@ def merge(nums,l,mid,r):    #sorting the array from index l to r using merge sor
                        #while k will be used to keep track of the index in the original array.
         while k<=r:      
             if j == len(b):
-                nums[k]=a[i]
+                nums[k]=a[i] 
                 i+=1
                 k+=1
             elif i == len(a):

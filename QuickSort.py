@@ -4,11 +4,11 @@ def partition(nums,l,r):
     start=l
 
     # Move all values less than or equal to the pivot to the left side.
-    for j in range(l,r+1):
-        if nums[j]<=key:
+    for i in range(l,r+1):
+        if nums[i]<=key:
             temp=nums[start]
-            nums[start]=nums[j]
-            nums[j]=temp
+            nums[start]=nums[i]
+            nums[i]=temp
             start+=1
 
     # Pivot is now at its correct sorted position.
@@ -25,9 +25,9 @@ def quickSort(nums,l,r):
     quickSort(nums,pivot+1,r)
 
 def sortArray(nums):
-    n=len(nums)
+    n=len(nums)-1
     # Sort the whole array in place.
-    quickSort(nums,0,n-1)
+    quickSort(nums,0,n)
     return nums
 
 # Take all array elements in one line and print the sorted result.
