@@ -1,7 +1,4 @@
 def sortColors(nums):
-        """
-        Do not return anything, modify nums in-place instead.
-        """
         left=0
         right = len(nums)-1
         i=0
