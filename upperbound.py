@@ -7,7 +7,7 @@ Input: nums = [1,3,5,6], target = 5
 Output: 2
 """
 
-def lowerbound(nums, target):
+def upperbound(nums, target):
         n= len(nums)
         l=0
         r=n-1
@@ -25,7 +25,7 @@ def lowerbound(nums, target):
         return ans
 
 def searchInsert(nums, target): 
-     return lowerbound(nums, target)
+     return upperbound(nums, target)
 
 nums=list(map(int, input("enter the elements=").split()))
 print(nums)
