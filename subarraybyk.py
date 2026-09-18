@@ -5,16 +5,21 @@ def subarraySum(nums,k):
         count = 0
 
         for i in nums:
-            curr_sum += i
+            curr_sum = curr_sum +  i
             
             if curr_sum - k in freq:
                 count += freq[curr_sum-k]
             
-            freq[curr_sum] = 1 + freq.get(curr_sum, 0)
-        
+            if curr_sum in freq:  #AVOID COUNT DUPLICATION
+                freq[curr_sum] += 1
+            else:
+                freq[curr_sum] = 1
+
+          
         return count
-nums=[1,2,3,4,2,1]
-k=3
+
+nums=[1,1,2,3,4,-2,1]
+k=2
 print(subarraySum(nums,k))
         
             
