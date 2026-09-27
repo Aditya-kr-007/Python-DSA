@@ -28,7 +28,7 @@ def merge(nums,l,mid,r):    #sorting the array from index l to r using merge sor
                 k+=1
     
 def mergeSort(nums,l,r):   # define a function mergeSort that takes three arguments: nums, l, and r.
-                           #base case
+        #base case
         if l>=r:           #if the left index is greater than or equal to the right index, return from the function
             return
         #recursive case
