@@ -11,7 +11,7 @@ def partition(nums,l,r):
             nums[i]=temp
             start+=1
 
-    # Pivot is now at its correct sorted position.
+    # Pivot is now at its correct sorted position and we returning pivot index.
     return start-1
 
 def quickSort(nums,l,r):

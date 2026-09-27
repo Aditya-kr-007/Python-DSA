@@ -32,13 +32,13 @@ def mergeSort(nums,l,r):   # define a function mergeSort that takes three argume
         if l>=r:           #if the left index is greater than or equal to the right index, return from the function
             return
         #recursive case
-        mid =(l+r)//2           
+        mid = (l+r)//2           
         mergeSort(nums,l,mid)     #recursively sort the left half of the array from index l to mid
         mergeSort(nums,mid+1,r)   #recursively sort the right half of the array from index mid+1 to r
  
         merge(nums,l,mid,r)        #merge the two sorted halves of the array from index l to r
     
-def sortArray(nums) :
+def sortArray(nums):
         n=len(nums)-1
         mergeSort(nums,0,n)
         return nums
